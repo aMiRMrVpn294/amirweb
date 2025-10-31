@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+
+    <title>web amir</title>
+    <!--meta tag-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--style-->
+    <link href="style.css" rel="stylesheet">
+    <!--bootstrap css-->
+    <link href="bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!--fontawesome css-->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body dir="rtl">
+    <section class="container mt-4 mb-4">
+        <div class="row">
+
+            <!----sidebar / سایدبار---->
+            <div class="sidebar d-none d-md-block col-md-2 m-2 p-0">
+
+                <!--img / عکس-->
+
+                <!--navbar / نوار ناوبری-->
+                <div class="navbar-div mb-3">
+                    <div class="img-div mb-3">
+                        <img src="photo/user.jpg" width="100%">
+                    </div>
+
+                    <ul>
+
+                        <div class="d-flex div-menu active-menu" onclick="activePage('#about')">
+                            <i class="fa fa-user"></i>
+                            <li> درباره من </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#resume')">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <li> رزومه من </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#service')">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <li> خدمات </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#project')">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                            <li> نمونه کارها </li>
+                        </div>
+
+                        <div class="d-flex div-menu" onclick="activePage('#blog')">
+                            <i class="fa-solid fa-file-pen"></i>
+                            <li> وبلاگ </li>
+                        </div>
+
+                        <div class="d-flex first-child-li div-menu" onclick="activePage('#call')">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <li> تماس با من </li>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <!----setting / تنظیمات---->
+                <div class="setting-div">
+
+                    <ul>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="d-flex collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne">
+                                <div>
+                                    <i class="fa fa-gear"></i>
+                                </div>
+                                <li> تنظیمات </li>
+                                <i class="fa-solid fa-angle-down down-up-d"></i>
+                            </div>
+                        </div>
+
+                        <!--color / رنگ-->
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="d-flex accordion-body div-color">
+                                <li>
+                                    <p> رنگ های آماده </p>
+                                    <button class="button-color-style orange" value="orange"> </button>
+                                    <button class="button-color-style pink" value="pink"> </button>
+                                    <button class="button-color-style purple" value="purple"> </button>
+                                    <button class="button-color-style gold" value="gold"> </button>
+                                    <button class="button-color-style brown" value="brown"> </button>
+                                    <button class="button-color-style red" value="red"> </button>
+                                    <button class="button-color-style blue" value="blue"> </button>
+                                    <button class="button-color-style green" value="green"> </button>
+                                </li>
+                            </div>
+
+
+                            <div class="d-flex accordion-body div-color">
+                                <li>
+                                    <p> تنظیم دستی رنگ </p>
+                                    <div class="d-flex mt-2 div-custom-color">
+                                        <p> رنگ اصلی </p>
+                                        <input type="color" oninput="getColorCodeOne(this.value)" class="custom-color">
+                                    </div>
+                                    <div class="d-flex mt-2 div-custom-color">
+                                        <p> رنگ فرعی </p>
+                                        <input type="color" oninput="getColorCodeTwo(this.value)" class="custom-color">
+                                    </div>
+                                </li>
+                            </div>
+
+                            <!--font / فونت-->
+                            <div class="accordion-body div-color">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        انتخاب فونت
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><button class="dropdown-item" value="vazir" style="font-family: 'Vazir';">
+                                                وزیر </button></li>
+                                        <li><button class="dropdown-item" value="IranSans"
+                                                style="font-family: 'IranSans';"> ایران سنس </button></li>
+                                        <li><button class="dropdown-item" value="Shabnam"
+                                                style="font-family: 'Shabnam';"> شبنم </button></li>
+                                        <li><button class="dropdown-item" value="Sahel" style="font-family: 'Sahel';">
+                                                ساحل </button></li>
+                                        <li><button class="dropdown-item" value="yekan" style="font-family: 'Yekan';">
+                                                یکان </button></li>
+                                        <li><button class="dropdown-item" value="Tanha" style="font-family: 'Tanha';">
+                                                تنها </button></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <!--RTL - right / راست چین - شب و روز-->
+                            <div class="mt-3 accordion-body">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="p-1 div-night">
+                                            <i class="fa fa-adjust night"></i>
+                                        </div>
+
+                                        <div class="p-1">
+                                            <button class="RTL-E"> LTR </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!--page / صفحه -->
+            <div class="page col m-2">
+
+
+                <!--header / سربرگ-->
+                <div class="header mb-3">
+                    <div class="row">
+
+                        <div class="col-12 col-lg-6 mb-3 mb-lg-0 name d-flex">
+                            <div>
+                                <h1>امیرحسین جواهری</h1>
+                            </div>
+                            <div>
+                                <span> برنامه نویس وب </span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 network">
+                            <div class="row">
+                                <div class="col-7">
+                                    <a href="#"><i class="fa-brands fa-instagram icon-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-facebook-f icon-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter icon-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-pinterest-p icon-pinterest"></i></a>
+
+                                </div>
+                                <div class="col-5 div-resume-link Rtl-Ltr">
+                                    <a href="#" class="resume-link"> دانلود </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--about me / درباره من-->
+                <div class="about-me page-child active" id="about">
+
+                    <div class="row row-background-image">
+                        <div class="col-12 div-background-image">
+                            <img src="photo/bg-image.jpg" alt="#">
+                            
+                            <div class="div-about-me mt-4 mt-md-0">
+                                <h2> <span id="fixed-word"> </span> <span id="typing-text"> </span> </h2>
+                                <p id="typing-text-p"> این رزومه توسط امیرحسین جواهری درست شده است و هر گونه کپی برداری پیگرد قانونی دارد </p>
+                                <a href="tel:09332214727" class="call-me"> تماس با من </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+
+                        <div class="col-12 mt-4 mt-md-0">
+
+                            <div class="row mt-4">
+                                <div class="about">
+                                    <h2> درباره <b> من </b> </h2>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                        کاربردی می باشد.
+                                    </p>
+                                </div>
+
+                                <h2 class="mt-4"> اطلاعات <b> پایه </b> </h2>
+                                <div class="col-12 col-md-6 about">
+                                    <ul>
+                                        <li>
+                                            تاریخ تولد: <span> 1388/03/08 </span>
+                                        </li>
+                                        <li>
+                                            شماره تماس: <span> 09332214727 </span>
+                                        </li>
+                                        <li>
+                                            محل سکونت: <span> روستا پایین ده</span>
+                                        </li>
+                                        <li>
+                                            ایمیل: <span> pocom3am@gmail.com</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12 col-md-6 about">
+                                    <ul>
+                                        <li>
+                                            مدرک تحصیلی: <span> در حال تحصیل</span>
+                                        </li>
+                                        <li>
+                                            وضعیت تاهل: <span> مجرد </span>
+                                        </li>
+                                        <li>
+                                            وضعیت: <span> آماده </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="row mt-4">
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-list-check"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 0 </span>
+                                            </div>
+                                        </div>
+                                        <p> پروژه های انجام شده </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                </i><i class="fa-solid fa-user-group"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 0 </span>
+                                            </div>
+                                        </div>
+                                        <p> مشتریان راضی </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-medal"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 0 </span>
+                                            </div>
+                                        </div>
+                                        <p> جوایز دریافت شده </p>
+                                    </div>
+
+                                    <div class="col-6 col-md about-number">
+                                        <div class="d-flex div-about-number">
+                                            <div>
+                                                <i class="fa-solid fa-sitemap"></i>
+                                            </div>
+                                            <div>
+                                                <span class="counter"> 0 </span>
+                                            </div>
+                                        </div>
+                                        <p> دامنه های بنام </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--my resume / رزومه من-->
+                <div class="my-resume page-child" id="resume">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+                            <h2> سوابق <b>تحصیلی</b> </h2>
+
+                            <div class="div-resume mt-3">
+                                <h3> مدرک دیپلم </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> مدرک برنامه نویسی </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> مدرک افتخاری </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-3 mt-md-0">
+                            <h2> سوابق <b>شغلی</b> </h2>
+
+                            <div class="div-resume mt-3">
+                                <h3> برنامه نویسی </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> سئو </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+                            <div class="div-resume mt-3">
+                                <h3> طراحی گرافیک </h3>
+                                <span> 1404_1405 </span>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-5">
+
+                        <div class="col-12 col-md-6 Skill">
+                            <h2> مهارت های <b>طراحی</b> </h2>
+
+                            <h6 class="mt-3"> طراحی سایت </h6>
+                            <span class="Rtl-Ltr"> ۹۰% </span>
+                            <div class="div-meter">
+                                <div style="width: 90%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> طراحی گرافیک </h6>
+                            <span class="Rtl-Ltr"> ۹۵% </span>
+                            <div class="div-meter">
+                                <div style="width: 95%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> طراحی چاپ </h6>
+                            <span class="Rtl-Ltr"> ۸۰% </span>
+                            <div class="div-meter">
+                                <div style="width: 80%;"> </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 Skill mt-5 mt-md-0">
+                            <h2> مهارت های <b>برنامه نویسی</b> </h2>
+
+                            <h6 class="mt-3"> HTML - CSS </h6>
+                            <span class="Rtl-Ltr"> ۹۵% </span>
+                            <div class="div-meter">
+                                <div style="width: 95%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> javaScript </h6>
+                            <span class="Rtl-Ltr"> ۹۰% </span>
+                            <div class="div-meter">
+                                <div style="width: 90%;"> </div>
+                            </div>
+
+                            <h6 class="mt-3"> PHP </h6>
+                            <span class="Rtl-Ltr"> ۸۵% </span>
+                            <div class="div-meter">
+                                <div style="width: 85%;"> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--service / خدمات-->
+                <div class="service page-child" id="service">
+
+                    <div class="row">
+
+                        <h2> خدمات <b>من</b> </h2>
+                        <div class="col-12 col-md-6">
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-1.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> برنامه نویسی </h3>
+                                        <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان گرافیک است. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-3.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> طراحی سایت </h3>
+                                        <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان گرافیک است. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6">
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-4.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> طراحی گرافیک </h3>
+                                        <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان گرافیک است. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div-service mt-3">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <img src="photo/icon/icon-2.png" class="mw-100">
+                                    </div>
+                                    <div class="col-9 p-0">
+                                        <h3> عکاسی </h3>
+                                        <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان گرافیک است. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row Customer mt-5 mw-100">
+                        <h2> برخی از <b>مشتریان</b> </h2>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user1.jpg" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user2.jpg" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user3.jpg" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user4.jpg" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user1.jpg" alt="logo">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <img src="photo/users/user3.jpg" alt="logo">
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <h2> دیدگاه <b>مشتریان</b> </h2>
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user1.jpg">
+                                    <span> محمد آزادی </span>
+                                </div>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user2.jpg">
+                                    <span> امیرحسین صادقی </span>
+                                </div>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user3.jpg">
+                                    <span> رضا رشیدی </span>
+                                </div>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-5">
+
+                            <div class="div-opinion mt-3">
+                                <div class="div-suer-photo">
+                                    <img src="photo/users/user4.jpg">
+                                    <span> سعید نقیبی </span>
+                                </div>
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است. </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--project / نمونه کارها-->
+                <div class="project page-child" id="project">
+
+                    <h2> نمونه <b>کارها</b> </h2>
+                    <p> ما در اینجا به برسی چندین تا از نمونه کار های بنده می پردازیم ... </p>
+                    <div class="row mt-4 mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> برنامه نویسی </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> برنامه نویسی </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-programmer">
+                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> برنامه نویسی </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی سایت </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی سایت </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-site">
+                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی سایت </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی گرافیک </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی گرافیک </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+                        <div class="col-12 col-md project-div m-auto mb-3 m-md-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-graphic">
+                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                            <div></div>
+                            <span> طراحی گرافیک </span>
+                            <p> نام پروژه : ... </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal-programmer -->
+                    <div class="modal fade" id="exampleModal-programmer" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">نام پروژه : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+                                            <img src="photo/progect/programmer/programmer-1.jpg" class="mw-100"
+                                                alt="project">
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> توضیحات <b>پروژه</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> نام نویسنده: <span> امیرحسین جواهری</span> </li>
+                                                <li class="mt-3"> تاریخ شروع پروژه: <span> 1404_1405 </span> </li>
+                                                <li class="mt-3"> تاریخ اتمام پروژه: <span> 1404_1405۱۴۰۲/۵/۲۸ </span> </li>
+                                                <li class="mt-3"> لینک پروژه: <span> <a href="#"> www.example.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> توضیحات تکمیلی: <span> لورم ایپسوم متن ساختگی با تولید
+                                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                                        است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                                                        درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                                                        تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                                        الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                                                    </span> </li>
+                                                <button class="mt-5"> تماس با ما </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">بستن</button>
+                                    <a href="#"><button type="button">اشتراک گذاری</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal-site -->
+                    <div class="modal fade" id="exampleModal-site" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">نام پروژه : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+                                            <img src="photo/progect/design%20website/design-website.jpg" class="mw-100"
+                                                alt="project">
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> توضیحات <b>پروژه</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> نام طراح: <span>امیرحسین جواهری</span> </li>
+                                                <li class="mt-3"> تاریخ شروع پروژه: <span> 1404_1405 </span> </li>
+                                                <li class="mt-3"> تاریخ اتمام پروژه: <span> 1404_1405 </span> </li>
+                                                <li class="mt-3"> لینک پروژه: <span> <a href="#"> www.site.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> توضیحات تکمیلی: <span> لورم ایپسوم متن ساختگی با تولید
+                                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                                        است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                                                        درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                                                        تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                                        الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                                                    </span> </li>
+                                                <button class="mt-5"> تماس با ما </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">بستن</button>
+                                    <a href="#"><button type="button">اشتراک گذاری</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal-graphic -->
+                    <div class="modal fade" id="exampleModal-graphic" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">نام پروژه : ...</h1>
+                                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 col-md-5">
+                                            <img src="photo/progect/graphic/graphic.jpg" class="mw-100" alt="project">
+                                        </div>
+                                        <div class="col-12 col-lg-7">
+                                            <h3 class="mt-3 mt-md-0"> توضیحات <b>پروژه</b> </h3>
+                                            <ul>
+                                                <li class="mt-4"> نام طراح: <span> امیرحسین جواهری</span> </li>
+                                                <li class="mt-3"> تاریخ شروع پروژه: <span> 1404_1405 </span> </li>
+                                                <li class="mt-3"> تاریخ اتمام پروژه: <span> 1404_1405 </span> </li>
+                                                <li class="mt-3"> لینک پروژه: <span> <a href="#"> www.site.com </a>
+                                                    </span> </li>
+                                                <li class="mt-3"> توضیحات تکمیلی: <span> لورم ایپسوم متن ساختگی با تولید
+                                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                                        است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                                        هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                                                        درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                                                        تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                                        الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                                                    </span> </li>
+                                                <button class="mt-5"> تماس با ما </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">بستن</button>
+                                    <a href="#"><button type="button">اشتراک گذاری</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!--blog / مقالات-->
+                <div class="blog page-child" id="blog">
+
+                    <h2> مقالات <b>سایت</b> </h2>
+                    <p> برای آگاهی بیشتر و دریافت اطلاعات در مورد برنامه نویسی به مقالات سایت ما مراجعه کنید ... </p>
+                    <div class="row mt-4 mw-100 m-auto">
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> سئو چیست؟ </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> انواع هوش مصنوعی </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-1.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> سئو سایت چقدر طول میکشد؟ </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mw-100 m-auto">
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> همه چیز درباره بازاریابی محتوا </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> معرفی ابزارک های فتوشاپ </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md blog-div mb-3 m-md-2">
+                            <div class="div-content">
+                                <a href="blog.html"> <img src="photo/blog/blog-2.jpg" class="mw-100" alt="blog"> </a>
+                                <span class="date"> ۲۸ آذر </span>
+                                <div>
+                                    <a href="blog.html">
+                                        <h3> آموزش نصب کورل </h3>
+                                    </a>
+                                    <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. </p>
+                                    <span> بدون دیدگاه </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- call / تماس با ما -->
+                <div class="call page-child" id="call">
+                    <div class="row">
+                        <h2> تماس <b> با من </b> </h2>
+
+                        <div class="col-12 col-md-6 div-call-form mt-2">
+                            <form>
+                                <input type="text" placeholder="نام و نام خانوادگی">
+                                <br>
+                                <input type="number" placeholder="شماره تماس">
+                                <br>
+                                <textarea> با سلام و خسته نباشید... </textarea>
+                        </div>
+
+                        <div class="col-12 col-md-6 mt-2 div-call-list">
+                            <ul>
+                                <li>
+                                    شماره تماس: <span> 09332214727 </span>
+                                </li>
+                                <li>
+                                    محل سکونت: <span> روستا پایین ده</span>
+                                </li>
+                                <li>
+                                    ایمیل: <span> info@example.com </span>
+                                </li>
+                                <li>
+                                    وب سایت: <span> www.example.com </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2 div-blog-submit">
+                        <div class="col">
+                            <button type="submit"> ارسال پیغام </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----sidebar-mobile / سایدبار---->
+    <div class="sidebar sidebar-mobile p-0 d-md-none">
+        <div class="div-sidebar-mobile">
+
+            <!--img / عکس-->
+            <div class="img-div mb-3">
+                <img src="photo/user.jpg" width="100%">
+            </div>
+
+            <!--navbar / نوار ناوبری-->
+            <div class="navbar-div mb-3">
+                <ul>
+
+                    <div class="d-flex div-menu active-menu" onclick="activePage('#about')">
+                        <i class="fa fa-user"></i>
+                        <li> درباره من </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#resume')">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <li> رزومه من </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#service')">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <li> خدمات </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#project')">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                        <li> نمونه کارها </li>
+                    </div>
+
+                    <div class="d-flex div-menu" onclick="activePage('#blog')">
+                        <i class="fa-solid fa-file-pen"></i>
+                        <li> وبلاگ </li>
+                    </div>
+
+                    <div class="d-flex first-child-li div-menu" onclick="activePage('#call')">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <li> تماس با من </li>
+                    </div>
+
+                </ul>
+            </div>
+
+            <!----setting / تنظیمات---->
+            <div class="setting-div">
+
+                <ul>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="d-flex collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne">
+                            <div>
+                                <i class="fa fa-gear"></i>
+                            </div>
+                            <li> تنظیمات </li>
+                            <i class="fa-solid fa-angle-down down-up-d"></i>
+                        </div>
+                    </div>
+
+                    <!--color / رنگ-->
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="d-flex accordion-body div-color">
+                            <li>
+                                <p> رنگ </p>
+                                <button class="button-color-style orange" value="orange"> </button>
+                                <button class="button-color-style pink" value="pink"> </button>
+                                <button class="button-color-style purple" value="purple"> </button>
+                                <button class="button-color-style gold" value="gold"> </button>
+                                <button class="button-color-style brown" value="brown"> </button>
+                                <button class="button-color-style red" value="red"> </button>
+                                <button class="button-color-style blue" value="blue"> </button>
+                                <button class="button-color-style green" value="green"> </button>
+                            </li>
+                        </div>
+
+                        <div class="d-flex accordion-body div-color">
+                            <li>
+                                <p> تنظیم دستی رنگ </p>
+                                <div class="d-flex mt-2 div-custom-color">
+                                    <p> رنگ اصلی </p>
+                                    <input type="color" oninput="getColorCodeOne(this.value)" class="custom-color">
+                                </div>
+                                <div class="d-flex mt-2 div-custom-color">
+                                    <p> رنگ فرعی </p>
+                                    <input type="color" oninput="getColorCodeTwo(this.value)" class="custom-color">
+                                </div>
+                            </li>
+                        </div>
+
+                        <!--font / فونت-->
+                        <div class="accordion-body div-color">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    انتخاب فونت
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><button class="dropdown-item" value="vazir" style="font-family: 'Vazir';"> وزیر
+                                        </button></li>
+                                    <li><button class="dropdown-item" value="IranSans" style="font-family: 'IranSans';">
+                                            ایران سنس </button></li>
+                                    <li><button class="dropdown-item" value="Shabnam" style="font-family: 'Shabnam';">
+                                            شبنم </button></li>
+                                    <li><button class="dropdown-item" value="Sahel" style="font-family: 'Sahel';"> ساحل
+                                        </button></li>
+                                    <li><button class="dropdown-item" value="yekan" style="font-family: 'Yekan';"> یکان
+                                        </button></li>
+                                    <li><button class="dropdown-item" value="Tanha" style="font-family: 'Tanha';"> تنها
+                                        </button></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!--RTL - right / راست چین - شب و روز-->
+                        <div class="mt-3 accordion-body">
+                            <li>
+                                <div class="d-flex">
+                                    <div class="p-1 div-night">
+                                        <i class="fa fa-adjust night"></i>
+                                    </div>
+
+                                    <div class="p-1">
+                                        <button class="RTL-E"> LTR </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--btn menu / دکمه منو-->
+    <div class="div-button-sidebar d-md-none">
+        <button class="button-sidebar"> <i class="fa-solid fa-bars"></i> </button>
+    </div>
+
+</body>
+
+
+<!--bootstrap js-->
+<script src="bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+<!--fontawesome js-->
+<script src="fontawesome/js/all.min.js"></script>
+<!--script-->
+<script src="script.js"></script>
+
+
+
+<!-- Mirrored from istgahedandan.ir/rahmani/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Dec 2023 18:00:33 GMT -->
+</html>
